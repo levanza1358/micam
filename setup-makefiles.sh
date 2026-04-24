@@ -55,9 +55,9 @@ sed -i 's|device/|vendor/|g' "$ANDROIDBP" "$ANDROIDMK" "$BOARDMK" "$PRODUCTMK"
 cat << 'EOF' >> "$ANDROIDMK"
 CAMERA_LIBRARIES := libcamera_algoup_jni.xiaomi.so libcamera_mianode_jni.xiaomi.so
 
-CAMERA_SYMLINKS := $(addprefix $(TARGET_OUT_APPS_PRIVILEGED)/HyperOSCamera/lib/arm64/,$(notdir $(CAMERA_LIBRARIES)))
+CAMERA_SYMLINKS := $(addprefix $(TARGET_OUT_APPS_PRIVILEGED)/MiuiCamera/lib/arm64/,$(notdir $(CAMERA_LIBRARIES)))
 $(CAMERA_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "HyperOSCamera lib link: $@"
+	@echo "MiuiCamera lib link: $@"
 	@mkdir -p $(dir $@)
 	@rm -rf $@
 	$(hide) ln -sf /system/lib64/$(notdir $@) $@
@@ -70,4 +70,3 @@ write_makefiles "${MY_DIR}/proprietary-files.txt"
 
 # Finish
 write_footers
-
