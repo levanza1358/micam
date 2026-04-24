@@ -89,9 +89,9 @@ cc_prebuilt_library_shared {
 }
 
 android_app_import {
-	name: "MiuiCamera",
+	name: "HyperOSCamera",
 	owner: "xiaomi",
-	apk: "proprietary/system/priv-app/MiuiCamera/MiuiCamera.apk",
+	apk: "proprietary/system/priv-app/HyperOSCamera/HyperOSCamera.apk",
 	overrides: ["Camera", "Camera2", "GoogleCameraGo"],
 	certificate: "platform",
 	dex_preopt: {
@@ -99,4 +99,5 @@ android_app_import {
 	},
 	privileged: true,
 }
+
 

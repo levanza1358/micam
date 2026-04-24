@@ -5,6 +5,7 @@
 //
 
 runtime_resource_overlay {
-    name: "MiuiCameraOverlayLeicaed",
+    name: "HyperOSCameraOverlayLeicaed",
     product_specific: true,
 }
+

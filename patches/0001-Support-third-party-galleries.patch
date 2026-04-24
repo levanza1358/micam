@@ -28,7 +28,7 @@ index 18d651393..5f40e0171 100644
 -
 -    invoke-virtual {p0, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
  
-     const-string p1, "from_MiuiCamera"
+     const-string p1, "from_HyperOSCamera"
  
 diff --git a/smali_classes4/com/xiaomi/camera/parallelservice/provider/ParallelProcessProvider.smali b/smali_classes4/com/xiaomi/camera/parallelservice/provider/ParallelProcessProvider.smali
 index 8db48227..574e36e6 100644
@@ -65,4 +65,5 @@ index 8db48227..574e36e6 100644
      return v1
 -- 
 2.34.1
+
 

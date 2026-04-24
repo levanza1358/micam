@@ -63,7 +63,7 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             patchelf --replace-needed libgui.so libgui-xiaomi.so "${2}"
             ;;
-        system/priv-app/MiuiCamera/MiuiCamera.apk)
+        system/priv-app/HyperOSCamera/HyperOSCamera.apk)
             [ "$2" = "" ] && return 0
             apktool_patch "${2}" "$MY_DIR/patches"
             split --bytes=20M -d "$2" "$2".part
@@ -86,3 +86,4 @@ setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
 
 "${MY_DIR}/setup-makefiles.sh"
+
